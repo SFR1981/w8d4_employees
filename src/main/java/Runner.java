@@ -1,7 +1,11 @@
 import db.DBHelper;
+import db.DBManager;
 import models.Administrator;
 import models.Department;
+import models.Employee;
 import models.Manager;
+
+import java.util.List;
 
 public class Runner {
 
@@ -23,6 +27,14 @@ public class Runner {
         DBHelper.save(administrator3);
         Administrator administrator4 = new Administrator("garry", "123333343", 400, manager);
         DBHelper.save(administrator4);
+
+
+        List<Employee> result = DBManager.getEmployeesFromManager(manager);
+       Manager foundDepartment = DBManager.getManagerFromDepartment(department);
+       Department x = manager.getDepartment();
+
+
+       Department department3 = DBManager.getDepartmentFromManager(manager);
 
 
 
