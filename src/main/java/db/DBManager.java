@@ -33,21 +33,7 @@ public class DBManager {
     }
 
 
-    public static Manager getManagerFromDepartment(Department department){
-        session = HibernateUtil.getSessionFactory().openSession();
-        Manager manager = null;
 
-        try{
-            Criteria cr = session.createCriteria(Manager.class);
-            cr.add(Restrictions.eq("department", department));
-            manager = (Manager) cr.uniqueResult();
-        }catch (HibernateException e){
-            e.printStackTrace();
-        }finally{
-            session.close();
-        }
-        return manager;
-    }
 
     public static Department getDepartmentFromManager(Manager manager){
         session = HibernateUtil.getSessionFactory().openSession();

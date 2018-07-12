@@ -40,7 +40,8 @@ public Department(){}
         this.name = name;
     }
 
-    @OneToOne(mappedBy = "department", fetch = FetchType.LAZY)
+    @OneToOne( fetch = FetchType.LAZY)
+    @JoinColumn( name = "manager_id", nullable = false)
     public Manager getManager() {
         return manager;
     }

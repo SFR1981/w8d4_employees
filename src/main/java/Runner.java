@@ -14,11 +14,12 @@ public class Runner {
 
 
         Manager manager = new Manager("John", "123", 1000, 9999);
+        DBHelper.save(manager);
 
         Department department = new Department("computers", manager);
-        manager.setDepartment(department);
+//        manager.setDepartment(department);
         DBHelper.save(department);
-        DBHelper.save(manager);
+
         Administrator administrator = new Administrator("harry", "123343", 400, manager);
         DBHelper.save(administrator);
         Administrator administrator2 = new Administrator("barry", "12333", 400, manager);
@@ -30,7 +31,7 @@ public class Runner {
 
 
         List<Employee> result = DBManager.getEmployeesFromManager(manager);
-       Manager foundDepartment = DBManager.getManagerFromDepartment(department);
+
        Department x = manager.getDepartment();
 
 
