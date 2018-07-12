@@ -9,5 +9,8 @@
         <module name="W8D4_StephenCan_Admins" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="W8D4_StephenCan_Admins" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
